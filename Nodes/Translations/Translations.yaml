@@ -1,0 +1,12 @@
+Name: Translations
+Type: TranslationsCategoryFolder
+ReferenceType: HasLogic
+Children:
+- Name: BehaviourStartPriority
+  Type: BehaviourStartPriorityVariableType
+  DataType: Byte
+  Value: 180
+- Class: Method
+  Name: TranslationsTest
+- Class: Method
+  Name: CleanUp

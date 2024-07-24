@@ -1,0 +1,172 @@
+Name: NetLogic_Testing
+Type: ProjectFolder
+Children:
+- Name: PasswordPolicy
+  Type: PasswordPolicy
+  Children:
+  - Name: MaximumPasswordAge
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 0
+  - Name: EnforcePasswordHistory
+    Type: BaseDataVariableType
+    DataType: Byte
+    Value: 1
+  - Name: MinimumPasswordAge
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 0
+  - Name: MinimumPasswordLength
+    Type: BaseDataVariableType
+    DataType: Byte
+    Value: 8
+- Name: ReturnKnownNodes
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ReturnNodesTest
+- Name: ReturnNodesBySearch
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ReturnNodesSearchTest
+- Name: AddRemoveNodes
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: RemoveLabel
+  - Class: Method
+    Name: RemoveUIFolder
+  - Class: Method
+    Name: AddNodes
+  - Class: Method
+    Name: RemovePanel
+- Name: ObjectCreation
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CreateObjects
+  - Class: Method
+    Name: CleanUp
+- Name: VariableCreation
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CreateVariables
+  - Class: Method
+    Name: CleanUp
+- File: StaticObjects/StaticObjects.yaml
+- Name: LogMessages
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: GenerateLogMessages
+- Name: DynamicLinks
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: GenerateDynamicLinks
+  - Class: Method
+    Name: CleanUp
+  - Class: Method
+    Name: ResetDynamicLinks
+- Name: Aliases
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CleanUp
+  - Class: Method
+    Name: GenerateAliases
+  - Name: Motor
+    Type: Alias
+    DataType: NodeId
+    Value: "/Objects/NetLogic_Testing/StaticObjects/EngineMotor"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/NetLogic_Testing/StaticObjects/Motor"
+- Name: ResourcePaths
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ResourcePathsTest
+  - Class: Method
+    Name: CleanUp
+- File: Translations/Translations.yaml
+- Name: Authentication
+  Type: PropertyGroup
+  Children:
+  - Name: AuthenticationMode
+    Type: BaseDataVariableType
+    DataType: AuthenticationMode
+    Value: 0
+- Name: AlarmConfiguration
+  Type: PropertyGroup
+  Children:
+  - Name: BranchingEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+- Name: Localization
+  Type: PropertyGroup
+  Children:
+  - Name: Locales
+    Type: BaseDataVariableType
+    DataType: LocaleId
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US","it-IT","pl-PL"]
+  - Name: LocaleFallbackList
+    Type: BaseDataVariableType
+    DataType: LocaleId
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]
+- Name: TranslationsNetlogic
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CleanUp
+  - Class: Method
+    Name: TranslationsTest
